@@ -27,15 +27,14 @@ export default async function Home() {
     <div>
       <div className="md:px-[60px] px-[20px] grid place-items-center gap-x-40 grid-col-2 md:grid-cols-3 py-5">
         {quote.map((ele: { id: number; name: string; type: string }) => (
-          <div key={ele.id} className="mt-10 cursor-pointer">
+          <div key={ele.id} className="mt-10  ">
             <Link href={`/products/${ele.id}`}>
-
             <div>
               <Image src={books} width={300} height={100} alt="books"></Image>
             </div></Link>
             <div className="mt-3">
-              <p className="text-2xl text-gray-800 uppercase"> {ele.name}</p>
-              <p className="text-1xl text-gray-500 uppercase"> {ele.type}</p>
+              <p className="text-2xl text-orange-800 uppercase"> {ele.name}</p>
+              <p className="text-1xl text-gray-700 uppercase"> {ele.type}</p>
             </div>
           </div>
         ))}
