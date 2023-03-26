@@ -3,14 +3,19 @@ import books from "../../../public/books.jpg";
 
 //https://beta.nextjs.org/docs/data-fetching/generating-static-params
 export async function generateStaticParams() {
-  const names: string[] = ["1", "2", "3", "4", "5", "6"];
+  const products: string[] = ["1", "2", "3", "4", "5", "6"];
 
-  return names.map((name) => ({
-    name: name,
+  return products.map((product) => ({
+    product: product,
   }));
 }
+
+
+
+
+
 async function getData() {
-  const res = await fetch("https://simple-books-api.glitch.me/books/1");
+  const res = await fetch("https://simple-books-api.glitch.me/books/3");
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
@@ -36,7 +41,8 @@ export default async function GiveName({
         <div>
           <Image src={books} width={500} height={200} alt="books"></Image>
         </div>
-        <div className="flex flex-col m-5 p-10 bg-gray-300">
+        <div className=" bg-gray-300 w-[1000px]">
+        <div className="flex flex-col m-5 p-10">
           <p className="text-8xl">{quote.name}</p>
 
           <hr />
@@ -55,6 +61,7 @@ export default async function GiveName({
           <p className="text-4xl  text-orange-800 uppercase mt-3">
             Book Price: <span className=" text-teal-900">{quote.price} $</span>
           </p>
+        </div>
         </div>
       </div>
     </div>
