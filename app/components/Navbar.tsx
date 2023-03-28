@@ -15,9 +15,9 @@ interface Navbar {
 export const NAV: Navbar[] = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "Products", link: "products" },
-  { id: 3, name: "Services", link: "services" },
-  { id: 4, name: "Porfolio", link: "projects" },
-  { id: 5, name: "Contact", link: "contact" },
+  { id: 3, name: "Categories", link: "categories" },
+  { id: 4, name: "Aboutus", link: "about" },
+  { id: 5, name: "Contact", link: "https://github.com/shoaibattari" },
 ];
 
 function Navbar() {
