@@ -1,10 +1,14 @@
-"use client"
 import Link from "next/link";
 
 
 export default function Home() {
   return (
     <div>
+      <div>
+
+
+
+      </div>
       <div className="text-center ">
         <h1 className="text-7xl font-bold  mt-5 text-orange-500">
           Well come to <span className="text-green-500"> Book shop</span>

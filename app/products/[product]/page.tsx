@@ -25,38 +25,62 @@ async function getData(id: number) {
 }
 
 export default async function GiveProductDetail(props: any) {
-  console.log(props);
+  // console.log(props);
   const quote = await getData(props.params.product);
-  console.log(quote);
 
+  // console.log(quote);
   return (
     <div>
-      <div className="flex p-3">
-        <div>
-          <Image src={books} width={500} height={200} alt="books"></Image>
+      <div className="md:px-[50px] px-[20px] grid grid-col-1 md:grid-cols-2 py-5">
+        <div className="md:flex">
+          <Image src={books} width={700} height={200} alt="books"></Image>
         </div>
-        <div className=" bg-gray-300 w-[1000px]">
-          <div className="flex flex-col m-5 p-10">
-            <p className="text-8xl">{quote.name}</p>
+        <div className=" bg-gray-300 w-auto">
+          <div className="grid m-5 p-5">
+            <div>
+              <p className="text-3xl lg:text-5xl uppercase font-bold  my-3">{quote.name}</p>
 
+              <hr />
+            </div>
+            <div className="grid grid-cols-2 my-3">
+              <p className=" text-1xl md:text-2xl  text-orange-800 uppercase">
+                 Price:
+              </p>
+              <p className="text-1xl md:text-2xl  text-teal-900 font-bold">
+                $ {quote.price}
+              </p>
+            </div>
             <hr />
-            <p className="text-4xl  text-orange-800 uppercase mt-3">
-              Book Name: <span className=" text-teal-900">{quote.name}</span>
-            </p>
-            <p className="text-4xl  text-orange-800 uppercase mt-3">
-              Book Author:
-              <span className=" text-teal-900">{quote.author}</span>
-            </p>
-            <p className="text-4xl  text-orange-800 uppercase mt-3">
-              Book Isbn: <span className=" text-teal-900">{quote.isbn}</span>
-            </p>
-            <p className="text-4xl  text-orange-800 uppercase mt-3">
-              Book Type: <span className=" text-teal-900">{quote.type}</span>
-            </p>
-            <p className="text-4xl  text-orange-800 uppercase mt-3">
-              Book Price:
-              <span className=" text-teal-900">{quote.price} $</span>
-            </p>
+
+            <div className="grid grid-cols-2 my-3">
+              <p className=" text-1xl md:text-2xl  text-orange-800 uppercase">
+                Name:
+              </p>
+              <p className="text-1xl md:text-2xl  text-teal-900">
+                {quote.name}
+              </p>
+            </div>
+            <hr />
+
+            <div className="grid grid-cols-2 my-3">
+              <p className=" text-1xl md:text-2xl  text-orange-800 uppercase">
+              Type:
+              </p>
+              <p className="text-1xl md:text-2xl  text-teal-900">
+                {quote.type}
+              </p>
+            </div>
+            <hr />
+
+            <div className="grid grid-cols-2 my-3">
+              <p className=" text-1xl md:text-2xl  text-orange-800 uppercase">
+               Author:
+              </p>
+              <p className="text-1xl md:text-2xl  text-teal-900">
+                {quote.author}
+              </p>
+            </div>
+            <hr />
           </div>
         </div>
       </div>
