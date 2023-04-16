@@ -22,11 +22,11 @@ async function getData() {
 }
 
 export default async function Home() {
-  const quote = await getData();
+  const products = await getData();
   return (
     <div>
       <div className="md:px-[60px] px-[20px] grid place-items-center gap-x-40 grid-col-2 md:grid-cols-3 py-5">
-        {quote.map((ele: { id: number; name: string; type: string }) => (
+        {products.map((ele: { id: number; name: string; type: string }) => (
           <div key={ele.id} className="mt-10  ">
             <Link href={`/products/${ele.id}`}>
             <div>

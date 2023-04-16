@@ -16,7 +16,7 @@ export const NAV: Navbar[] = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "Products", link: "products" },
   { id: 3, name: "Categories", link: "categories" },
-  { id: 4, name: "Aboutus", link: "about" },
+  { id: 4, name: "Register", link: "register  " },
   { id: 5, name: "Contact", link: "https://github.com/shoaibattari" },
 ];
 
